@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item android:id="@+id/user"
+        android:icon="@drawable/ic_user_24"
+        tools:ignore="MenuTitle" />
+
+    <item android:id="@+id/two"
+        android:icon="@drawable/ic_outline_looks_two_24"
+        tools:ignore="MenuTitle" />
+
+
+    <item android:id="@+id/three"
+        android:icon="@drawable/ic_outline_3k_24"
+        tools:ignore="MenuTitle" />
+
+
+</menu>

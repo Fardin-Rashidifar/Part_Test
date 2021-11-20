@@ -1,0 +1,151 @@
+ext {
+    def coreKtxVersion = '1.6.0'
+    def appCompatVersion = '1.3.0'
+    def materialComponentsVersion = '1.4.0'
+    def constraintLayoutVersion = '2.0.4'
+
+    def koinVersion = '2.2.2'
+
+    def junitVersion = '4.13.2'
+    def espressoVersion = '3.4.0'
+    def junitAndroidVersion = '1.1.2'
+
+    def retrofit = '2.9.0'
+    def room_version = '2.3.0'
+    def multiDex_version = "2.0.1"
+    def bottomNavigation = "1.0.4"
+    def glide = "4.12.0"
+
+    def dotVersion = "4.2"
+    def countryPhonePicker = "2.5.0"
+    def lottieVersion = "3.4.0"
+
+    def otpVersion = "1.4.4"
+    def circleImageViewVersion = "4.3.0"
+    def gmsLocationVersion = "12.0.0"
+
+    def mapBoxVersion = '9.6.1'
+    /*def mapBoxAnnotationVersion = '0.9.0'*/
+
+    // Mapbox
+    def mapboxMapPluginPrefix = 'v9'
+    def mapboxMapSdk = '9.6.0-alpha.1'
+    def mapboxJavaSdk = '5.8.0'
+    def mapboxPluginBuilding = '0.7.0'
+    def mapboxPluginPlaces = '0.12.0'
+    def mapboxPluginLocalization = '0.12.0'
+    def mapboxPluginTraffic = '0.10.0'
+    def mapboxPluginMarkerView = '0.4.0'
+    def mapboxPluginAnnotation = '0.9.0'
+    def mapboxPluginScalebar = '0.5.0'
+
+    def okHttpVersion = '4.9.1'
+    def nav_version = "2.3.5"
+    def okHttpLoggerVersion = '4.9.1'
+
+    def coroutinesVersion = '1.5.1'
+
+    def lifecycle_version = "2.4.0-alpha02"
+    def arch_version = "2.1.0"
+
+    def hilt_version = '2.35'
+    def timber = '4.7.1'
+    def work_version = '2.5.0'
+
+    generalDependencies = [
+            kotlin            : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            coreKtx           : "androidx.core:core-ktx:$coreKtxVersion",
+            appCompat         : "androidx.appcompat:appcompat:$appCompatVersion",
+            materialComponents: "com.google.android.material:material:$materialComponentsVersion",
+            constraintLayout  : "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion",
+            multiDex          : "androidx.multidex:multidex:$multiDex_version"
+    ]
+
+    privateDependencies = [
+            bottomNav         : "com.etebarian:meow-bottom-navigation:$bottomNavigation",
+            glide             : "com.github.bumptech.glide:glide:$glide",
+            dot               : "com.tbuonomo:dotsindicator:$dotVersion",
+            phonePicker       : "com.hbb20:ccp:$countryPhonePicker",
+            lottie            : "com.airbnb.android:lottie:$lottieVersion",
+            otp               : "io.github.chaosleung:pinview:$otpVersion",
+            circleImageView   : "com.mikhaellopez:circularimageview:$circleImageViewVersion",
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:$nav_version",
+            navigationUi      : "androidx.navigation:navigation-ui-ktx:$nav_version"
+    ]
+
+    reactiveExtensions = [
+            coroutines       : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion",
+            androidCoroutines: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+    ]
+
+    connection = [
+            retrofit    : "com.squareup.retrofit2:retrofit:$retrofit",
+            gson        : "com.squareup.retrofit2:converter-gson:$retrofit",
+            okHttp      : "com.squareup.okhttp3:okhttp:$okHttpVersion",
+            okHttpLogger: "com.squareup.okhttp3:logging-interceptor:$okHttpLoggerVersion"
+    ]
+
+    lifeCycle = [
+            viewModel          : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+            liveData           : "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version",
+            annotationProcessor: "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    ]
+
+    roomOrm = [
+            roomRuntime   : "androidx.room:room-runtime:$room_version",
+            roomCompiler  : "androidx.room:room-compiler:$room_version",
+            roomKapt      : "androidx.room:room-compiler:$room_version",
+            roomKSP       : "androidx.room:room-compiler:$room_version",
+            roomCoroutines: "androidx.room:room-ktx:$room_version"
+    ]
+
+    dependencyInjection = [
+            hilt: "com.google.dagger:hilt-android:$hilt_version",
+            hiltKapt: "com.google.dagger:hilt-android-compiler:$hilt_version"
+   /*         koin: "io.insert-koin:koin-core:$koinVersion",
+            kointest: "io.insert-koin:koin-test:$koinVersion",
+            koinAndroid: "io.insert-koin:koin-android:$koinVersion",
+            koinViewModel: "io.insert-koin:koin-android-viewmodel:$koinVersion"*/
+    ]
+
+    testDependencies = [
+            junitVersion: "junit:junit:$junitVersion",
+            junitAndroid: "androidx.test.ext:junit:$junitAndroidVersion",
+            espresso    : "androidx.test.espresso:espresso-core:$espressoVersion",
+            timber    : "com.jakewharton.timber:timber:$timber"
+
+    ]
+
+    googleMap = [
+            locationService: "com.google.android.gms:play-services-location:18.0.0",
+            googleMap: "com.google.android.gms:play-services-maps:17.0.1"
+    ]
+
+    workManager = [
+            workManagerCorotines: "androidx.work:work-runtime-ktx:$work_version"
+    ]
+
+    mapBox = [
+            mapBoxSdk               : "com.mapbox.mapboxsdk:mapbox-android-sdk:9.5.0",
+            mapboxTurf              : "com.mapbox.mapboxsdk:mapbox-sdk-turf:$mapboxJavaSdk",
+            mapboxServices          : "com.mapbox.mapboxsdk:mapbox-sdk-services:$mapboxJavaSdk",
+            // Mapbox plugins
+            mapboxPluginBuilding    : "com.mapbox.mapboxsdk:mapbox-android-plugin-building-$mapboxMapPluginPrefix:$mapboxPluginBuilding",
+            mapboxPluginPlaces      : "com.mapbox.mapboxsdk:mapbox-android-plugin-places-$mapboxMapPluginPrefix:$mapboxPluginPlaces",
+            mapboxPluginLocalization: "com.mapbox.mapboxsdk:mapbox-android-plugin-localization-$mapboxMapPluginPrefix:$mapboxPluginLocalization",
+            mapboxPluginTraffic     : "com.mapbox.mapboxsdk:mapbox-android-plugin-traffic-$mapboxMapPluginPrefix:$mapboxPluginTraffic",
+            mapboxPluginMarkerView  : "com.mapbox.mapboxsdk:mapbox-android-plugin-markerview-$mapboxMapPluginPrefix:$mapboxPluginMarkerView",
+            mapboxPluginAnnotation  : "com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-$mapboxMapPluginPrefix:$mapboxPluginAnnotation",
+            mapboxPluginScalebar    : "com.mapbox.mapboxsdk:mapbox-android-plugin-scalebar-$mapboxMapPluginPrefix:$mapboxPluginScalebar"
+
+            /* mapBoxSdk             : "com.mapbox.mapboxsdk:mapbox-android-sdk:9.6.1@aar",
+          mapboxTurf            : "com.mapbox.mapboxsdk:mapbox-sdk-turf:$mapboxJavaSdk",
+          mapboxServices        : "com.mapbox.mapboxsdk:mapbox-sdk-services:$mapboxJavaSdk",
+          mapboxCore            : "com.mapbox.mapboxsdk:mapbox-android-core:3.1.0@aar",
+          mapboxPlaces          : "com.mapbox.mapboxsdk:mapbox-android-plugin-places-v9:0.12.0@aar",
+          mapBoxTelemetry       : "com.mapbox.mapboxsdk:mapbox-android-telemetry:6.2.0@aar",
+          mapboxAndroidAccounts  : "com.mapbox.mapboxsdk:mapbox-android-accounts:0.7.0",
+          // Mapbox
+          mapboxPluginAnnotation: "com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-$mapboxMapPluginPrefix:$mapboxPluginAnnotation@aar"*/
+    ]
+}
