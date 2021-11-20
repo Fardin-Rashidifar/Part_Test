@@ -1,6 +1,7 @@
 package f.r.parttest.viewModel
 
 import android.content.Context
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -28,7 +29,7 @@ class ViewModelMainActivity  @Inject constructor(
         get() = areInserted
 
     fun getUserList() = viewModelScope.launch {
-        if (Utils.isOnline(G.instance) && getAllUsers().value?.size == 0) {
+        if (Utils.isOnline(G.instance) && getAllUsers().value?.size == null) {
             val response = model.getUserList()
             val data = response.body()
             if (data != null) {
